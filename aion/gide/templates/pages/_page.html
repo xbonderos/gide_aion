@@ -1,0 +1,20 @@
+{% load endless %}
+{% paginate pages %}
+{% load thumbnail %}
+{% for child in pages %}
+    <div class="page-item">
+        {% if child.img %}
+            {% thumbnail child.img "220" as im %}
+                    <a href="{{ child.get_absolute_url }}"><img src="{{ im.url }}"></a>
+                {% endthumbnail %}
+        {% endif %}
+        <h4>
+            <a href="{{ child.get_absolute_url }}">
+                {{ child.title }}
+            </a>
+        </h4>
+        {{ child.short_content|safe }}
+        <div class="bottom-page-item">Рейтинг/просмотры</div>
+    </div>
+    {% show_pages %}
+{% endfor %}

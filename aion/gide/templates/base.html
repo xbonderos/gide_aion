@@ -1,0 +1,58 @@
+{% load i18n staticfiles category_tags thumbnail %}<!DOCTYPE html>
+<html class="no-js" lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    {% load seo_tags %} {% seo_meta %}
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}" media="all"/>
+    <script type="text/javascript" src="{% static 'js/jquery-latest.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-1.10.2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-ui-1.10.3.custom.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.mousewheel-3.0.6.pack.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+    <script type="text/javascript">
+        jQuery(function ($) {
+            var container = document.querySelector('#content');
+            var msnry = new Masonry(container, {
+                columnWidth: 80,
+                itemSelector: '.page-item'
+            });
+        });
+    </script>
+
+</head>
+<body>
+<div class="grid">
+    <div class="col_12">
+        <div class="col_2">
+            Logo
+        </div>
+        <div class="col_10">
+            {% category_menu %}
+        </div>
+    </div>
+    <div class="col_12">
+        <div class="breadcrumbs">
+            {% block breadcrumb %}
+                {% load breadcrumb_tags %}
+                {% add_crumb 'Home' '/' %}
+            {% endblock %}
+            {% render_breadcrumbs %}
+        </div>
+    </div>
+    <div class="col_12">
+        {% block children_main %}{% endblock %}
+        {% block list_children %}{% endblock %}
+        {% block page_detail %}{% endblock %}
+        <div class="pagination-centered">
+            {% block js %}{{ block.super }}
+                <script type="text/javascript" src="{% static 'js/endless-pagination.js' %}"></script>
+            {% endblock %}
+        </div>
+    </div>
+    <p id="push"></p>
+</div>
+<div class="col_12">footer</div>
+</body>
+</html>

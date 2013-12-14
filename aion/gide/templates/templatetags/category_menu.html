@@ -1,0 +1,7 @@
+{% for parent in menu %}
+{#    <ul>#}
+{#        <li>#}
+            <a href="{{ parent.get_absolute_url }}">{{ parent.title }}</a>
+{#        </li>#}
+{#    </ul>#}
+{% endfor %}

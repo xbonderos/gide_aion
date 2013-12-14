@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block find %}
+    <div class="finders">
+        <form class="findForm" id="yw1" action="/product/find" method="post">
+            <div style="display:none">
+                <input type="hidden" value="" name="csrf_token"/>
+            </div>
+            <div class="helper">
+                <input class="find" placeHolder="Поиск товара..." autocomplete="off" type="text"
+                       name="CatalogProduction[name]" id="CatalogProduction_name"/>
+                <i class="icon-search"> </i>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+{% block children_main %}
+    {% for last_page in list_page %}
+        <div class="page-item">
+            {% if last_page.img %}
+                {% thumbnail last_page.img "220" as im %}
+                    <a href="{{ last_page.get_absolute_url }}"><img src="{{ im.url }}"></a>
+                {% endthumbnail %}
+            {% endif %}
+            <h4><a href="{{ last_page.get_absolute_url }}">{{ last_page.title|capfirst }}</a></h4>
+            {{ last_page.short_content|safe }}
+            <div class="bottom-page-item">теги</div>
+        </div>
+    {% endfor %}
+    <p class="clear"></p>
+{% endblock %}

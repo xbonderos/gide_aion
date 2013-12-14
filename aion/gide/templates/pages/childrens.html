@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block list_children %}
+    {% block breadcrumb %}
+        {{ block.super }}
+        {% load breadcrumb_tags %}
+        {% for crumb in page.get_ancestors %}
+            {% add_crumb crumb.title crumb.get_absolute_url %}
+        {% endfor %}
+        <a href="{{ page.get_absolute_url }}">{% add_crumb page.title 'detail' page.slug %}</a>
+    {% endblock %}
+    {% load endless %}
+    {% paginate pages %}
+    {% include "pages/_page.html" %}
+    <div class="pagination">
+        {% show_pages %}
+    </div>
+{% endblock %}
