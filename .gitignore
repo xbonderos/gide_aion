@@ -1,12 +1,12 @@
 <<<<<<< HEAD
 *.pyc
-aion/media/
+aion/media
 =======
 *.py[cod]
 
 # C extensions
 *.so
-
+.idea/
 # Packages
 *.egg
 *.egg-info

@@ -26,7 +26,7 @@ class Pages(MPTTModel):
     img = ImageField(upload_to='uploads/%Y/%m/%d', blank=True)
     content = HTMLField(blank=True)
     tags = TagField()
-
+    #я тут что то изменил
     class Seo:
         populate = {
             'title': 'title',
