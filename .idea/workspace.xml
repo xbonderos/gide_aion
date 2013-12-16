@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7eecae63-1052-41f1-8b6a-837956ef5707" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="aion.iws" />
     <ignored path=".idea/workspace.xml" />
