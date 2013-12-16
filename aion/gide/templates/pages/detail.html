@@ -1,26 +1,28 @@
 {% extends 'base.html' %}
+{% load thumbnail %}
 {% block page_detail %}
-        {% block breadcrumb %}
-            {{ block.super }}
-            {% load breadcrumb_tags %}
-            {% for crumb in page.get_ancestors %}
-                <a class="current" href="{{ page.get_absolute_url }}">
-                    {% add_crumb crumb.title crumb.get_absolute_url %}
-                </a>
-            {% endfor %}
-            {% add_crumb page.title 'detail' page.slug %}
-        {% endblock %}
+    {% block breadcrumb %}
+        {{ block.super }}
+        {% load breadcrumb_tags %}
+        {% for crumb in page.get_ancestors %}
+            <a class="current" href="{{ page.get_absolute_url }}">
+                {% add_crumb crumb.title crumb.get_absolute_url %}
+            </a>
+        {% endfor %}
+        {% add_crumb page.title 'detail' page.slug %}
+    {% endblock %}
 
     <div class="page-detail">
         {% if page %}
             <h3>{{ page.title }}</h3>
-            <article>{% if page.img %}
-            <a href="{{ page.img.url }}" class="fancybox">
-                <img src="{{ page.img.url }}">
-            </a>
+{#            {% if page.img %}#}
+{#                {% thumbnail page.img "900" as im %}#}
+{#                    <a href="{{ page.img.url }}"><img src="{{ im.url }}"></a>#}
+{#                {% endthumbnail %}#}
+{#            {% endif %}#}
         {% endif %}
-            <p>{{ page.content|safe }}</p>
-        {% else %}{% endif %}</article>
+        <p>{{ page.content|safe }}</p>
+
         <p class="clear"></p>
 
         <div class="bottom-page-detail">
