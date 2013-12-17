@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.pyc
 aion/media
 =======
+=======
+>>>>>>> 23250797a1fd3edb0fae684c250ff42830aa49e6
 *.py[cod]
 
 # C extensions
 *.so
+<<<<<<< HEAD
 .idea/
 =======
 *.py[cod]
@@ -18,6 +22,9 @@ aion/media
 *.so
 
 >>>>>>> ae8e10d0550b21ba7331bfe123c9ce9e59f7d40b
+=======
+
+>>>>>>> 23250797a1fd3edb0fae684c250ff42830aa49e6
 # Packages
 *.egg
 *.egg-info
@@ -50,6 +57,9 @@ nosetests.xml
 .project
 .pydevproject
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 68c02285b65fc496cf27047b72a45b5a1d6657fa
 =======
 >>>>>>> ae8e10d0550b21ba7331bfe123c9ce9e59f7d40b
+=======
+>>>>>>> 23250797a1fd3edb0fae684c250ff42830aa49e6
