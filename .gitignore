@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.pyc
 aion/media
 =======
@@ -7,6 +8,16 @@ aion/media
 # C extensions
 *.so
 .idea/
+=======
+*.py[cod]
+
+aion/media
+*.jpeg
+*.png
+# C extensions
+*.so
+
+>>>>>>> ae8e10d0550b21ba7331bfe123c9ce9e59f7d40b
 # Packages
 *.egg
 *.egg-info
@@ -38,4 +49,7 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+<<<<<<< HEAD
 >>>>>>> 68c02285b65fc496cf27047b72a45b5a1d6657fa
+=======
+>>>>>>> ae8e10d0550b21ba7331bfe123c9ce9e59f7d40b
