@@ -1,5 +1,8 @@
 *.py[cod]
 
+aion/media
+*.jpeg
+*.png
 # C extensions
 *.so
 
